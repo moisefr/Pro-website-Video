@@ -18,7 +18,7 @@
 
 /*style caroseul, confide the width and fix the height of the pictures Move the captions and set the font*/
 
-#bgvideo{
+video#bgvideo{
     position: fixed;
     min-height: 100%;
     min-width: 100%;
@@ -27,8 +27,17 @@
 }
 body{
     font-family: sans-serif;
+    position: relative;
 }
-
+@media (max-device-width:768px){
+    body{
+        background: url(images/nicolas-flor-LFzv5R9GbgQ-unsplash.jpg) center center fixed;
+        background-size: cover;
+    }
+    #bgvideo{
+        display: none;   
+    }
+}
 /*NavBar Styling*/
 .navbar-inverse { background-color: #08082B}
 .navbar-inverse .navbar-nav>.active>a:hover,.navbar-inverse .navbar-nav>li>a:hover, .navbar-inverse .navbar-nav>li>a:focus { background-color: #FFFFFF}
@@ -58,11 +67,19 @@ body{
    background-color: aliceblue; 
 }
 
+/*Header Styling*/
 .jumbotron {
-    padding-top: 200px;
+    padding-top: 100px;
     background: rgba(255, 255, 255, 0);
-    color: white;
-    margin-bottom: 400px;
+    color: mintcream;
+    margin: 0px 100px 0px 0px;
+    
+}
+.jumbotron p{
+    padding-top: 10px;
+    background: rgba(255, 255, 255, 0);
+    color: lightgoldenrodyellow;
+    font-size: 30px
     
 }
 .jumbotron div{
@@ -72,11 +89,9 @@ body{
 }
 
 .icons {
-    width: 500px;
+    margin: 0px 0px 0px 50px;
     align-self: center;
-    margin-left: 300px;
-    margin-right: 150px;
-    margin-bottom: 600px;
+
 }
 .icons img{
     width: 200px;
@@ -88,7 +103,33 @@ body{
 .icons h2,p{
     color: white;
 }
+.icons p{
+    font-size: 20px;
+    text-shadow: 1px 1px #ff0000;
+}
+.btn-custom {background: rgba(222, 42, 54, 0.72); border-color: rgba(255, 254, 245, 0.97); color: rgba(255, 255, 255, 1); font-size: 32px; border-radius: 4px; border-width: 1px;}
+.btn-custom:hover {background: rgba(237, 221, 156, 1); border-color: rgba(173, 173, 173, 1); color: rgba(51, 51, 51, 1);}
+.btn-custom:active, .btn-custom:focus {background: rgba(235, 235, 235, 1); border-color: rgba(173, 173, 173, 1); color: rgba(51, 51, 51, 1);}
 
 .container-fluid {
 
+}
+
+#promise{
+    padding-top: 100px;   
+}
+#myCarousel{
+    width: 60%;
+    margin: 0 auto;
+}
+.carousel-inner .item img{
+    height: 400px; 
+    margin: 0 auto;
+}
+
+.carousel-caption{
+    position: relative;
+    left: auto;
+    right: auto;
+    height: 200px;
 }
